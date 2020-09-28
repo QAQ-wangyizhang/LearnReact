@@ -7,5 +7,5 @@ import TickControl from './components/TickControl'
 // ReactDOM.render(<button onClick={handleClick}>点击我</button>,document.getElementById("root"))
 const tickControl = new TickControl();
 console.log(tickControl);
-ReactDOM.render((<TickControl></TickControl>),document.getElementById("root"))
+ReactDOM.render((<TickControl></TickControl>), document.getElementById("root"))
 

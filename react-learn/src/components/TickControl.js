@@ -2,28 +2,28 @@ import React, { Component } from 'react'
 import Tick from "./Tick"
 
 export default class TickControl extends Component {
-    constructor(){
+    constructor() {
         super();
         // this.timeOver = this.timeOver.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
     state = {
-        isOver : false
+        isOver: false
     }
-    handleClick(){
+    handleClick() {
         console.log(this); //undefined
         console.log("点击了")
     }
     // 结果timeover 不在原型上 而在对象上
-    timeOver= _ =>{
+    timeOver = _ => {
         console.log(this);
         this.setState({
-            isOver : true
+            isOver: true
         })
     }
     render() {
         let msg = "倒计时进行中..."
-        if(this.state.isOver){
+        if (this.state.isOver) {
             msg = "倒计时完成"
         }
         return (
