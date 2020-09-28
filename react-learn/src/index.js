@@ -1,37 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import src1 from "./assets/1.jpg";
-import src2 from "./assets/2.jpg";
-import src3 from "./assets/3.jpg";
-import "./index.css"
-let index = 0;
-const imgList = [src1,src2,src3]
-let timer = null;
-const container = document.getElementById("root");
-function render(){
-  ReactDOM.render((<img src={imgList[index]} alt="" />),container);
-}
-function start(){
-  stop();
- timer = setInterval(() => {
-    index = (index + 1) % 3;
-    render();
-  }, 1000);
-}
+import MyFuncComp from "./MyFuncComp";
+import MyClassComp from "./MyClassComp"
 
-function stop(){
-  clearInterval(timer);
-}
-
-container.onmouseenter = function(){
-  stop();
-  console.log("1")
-}
-container.onmouseleave = function(){
-  stop();
-  start();
-}
-
-render();
-
-start();
+// 当成react元素
+ReactDOM.render((<div>
+  <MyFuncComp num={4}></MyFuncComp>
+  {/* 组件不能更改自身的属性 */}
+  {/* React中 数据属于谁 谁有权利改动 */}
+  {/* React中的数据自上而下流动的 单向数据流 */}
+  <MyClassComp num={4}></MyClassComp>
+  <MyClassComp num={4}></MyClassComp>
+  <MyClassComp num={4}></MyClassComp>
+</div>),document.getElementById("root"))
