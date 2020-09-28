@@ -1,19 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tick from "./components/Tick"
+import BallList from './components/BallList';
+import "./index.css"
 
-// let num = 10
-// const timer = setInterval(() => {
-//   num --;
-//   if(num <= 0){
-//     clearInterval(timer);
-//   }
-//   ReactDOM.render((<div>
-//     <Tick number = {num}></Tick>
-//   </div>),document.getElementById("root"))
-// }, 1000);
-
-ReactDOM.render((<div>
-  <Tick number={10}></Tick>
-</div>),document.getElementById("root"))
+ReactDOM.render(<BallList />,document.getElementById("root"))
 
