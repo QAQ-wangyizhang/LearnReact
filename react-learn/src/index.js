@@ -1,15 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MyFuncComp from "./MyFuncComp";
-import MyClassComp from "./MyClassComp"
+import StudentList from "./components/StudentList"
 
-// 当成react元素
-ReactDOM.render((<div>
-  <MyFuncComp num={4}></MyFuncComp>
-  {/* 组件不能更改自身的属性 */}
-  {/* React中 数据属于谁 谁有权利改动 */}
-  {/* React中的数据自上而下流动的 单向数据流 */}
-  <MyClassComp num={4}></MyClassComp>
-  <MyClassComp num={4}></MyClassComp>
-  <MyClassComp num={4}></MyClassComp>
-</div>),document.getElementById("root"))
+const appkey = "QAQwangyizhang_1585626591787";
+async function fetchAllStudnets(){
+  const stus = await fetch("http://open.duyiedu.com/api/student/findAll?appkey=" + appkey)
+                        .then(res => res.json());
+  return stus;
+}
+
+async function render(){
+  ReactDOM.render((<h3>正在加载中...</h3>),document.getElementById("root"))
+  const s = await fetchAllStudnets();
+  // console.log(s.data);
+  ReactDOM.render((<div>
+    <StudentList stus={s.data}></StudentList>
+  </div>),document.getElementById("root"))
+}
+// let s = fetchAllStudnets().then(res => res);
+// console.log(s);
+render();
+
