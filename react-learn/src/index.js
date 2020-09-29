@@ -8,4 +8,4 @@ import "./index.css"
 //                         limit = {9}
 //                         panelNumber = {10}
 // ></Pager>, document.getElementById("root"))
-ReactDOM.render(<PagerTest></PagerTest>,document.getElementById("root"))
+ReactDOM.render(<PagerTest></PagerTest>, document.getElementById("root"))
