@@ -1,4 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import State from "./components/State"
 
-ReactDOM.render(<PagerTest></PagerTest>, document.getElementById("root"))
+ReactDOM.render(<State></State>, document.getElementById("root"))
