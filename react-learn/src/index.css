@@ -1,6 +1,10 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
 #root{
-    height: 280px;
-    margin: 100px auto;
+    
     user-select: none;
     display: flex;
     flex-direction: column;

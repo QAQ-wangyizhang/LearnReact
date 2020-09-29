@@ -1,0 +1,19 @@
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+}
+.modal.none{
+    display: none;
+}
+
+.modal p {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    color: #fff;
+    font-size: 45px;
+    transform: translate(-50%, -50%);
+}
