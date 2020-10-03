@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import State from "./components/State"
+import OldLifeCycle from "./OldLifeCycle"
 
-ReactDOM.render(<State></State>, document.getElementById("root"))
+ReactDOM.render(<OldLifeCycle n={1}></OldLifeCycle>, document.getElementById("root"))
