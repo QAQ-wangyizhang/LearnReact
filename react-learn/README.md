@@ -37,3 +37,16 @@ version  < 16.0.0
 10. **componentWillUnmount**
     1. 通常在该函数中销毁一些组件依赖的资源 比如计时器
 ## 新版生命周期
+
+官方认为数据的来源一定是单一的
+
+1. getDerivedStateFromProps
+    1. 通过参数可以获取新的属性和状态
+    2. 该函数是静态的
+    3. 该函数的返回值会覆盖掉组件状态
+    4. 该函数几乎没什么用
+
+2. getSnapshotBeforeUpdate
+    1. 真实dom树构造完成，但是还没有加入到页面中
+    2. 在该函数，通常实现一些附加的dom操作
+    3. 该函数的返回值 会作为componentDidUpdate的第三个参数

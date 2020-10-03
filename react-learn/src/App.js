@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import OldLifeCycle from "./OldLifeCycle"
+// import OldLifeCycle from "./OldLifeCycle"
+import NewLifeCycle from "./NewLifeCycle"
 
 export default class App extends Component {
     constructor(props){
@@ -14,8 +15,9 @@ export default class App extends Component {
             n : this.state.n + 1
         })
     }
+    
     render() {
-        const comp = this.state.show ? <OldLifeCycle n={this.state.n}></OldLifeCycle> : null
+        const comp = this.state.show ? <NewLifeCycle n={this.state.n}></NewLifeCycle> : null
         return (
             <div>
                 {comp}
