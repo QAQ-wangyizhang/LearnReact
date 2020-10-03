@@ -5,19 +5,26 @@ export default class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            n : 0
+            n : 0,
+            show : true
         }
     }
     handleClick = _ => {
         this.setState({
-            n : this.props.n + 1
+            n : this.state.n + 1
         })
     }
     render() {
+        const comp = this.state.show ? <OldLifeCycle n={this.state.n}></OldLifeCycle> : null
         return (
             <div>
-                <OldLifeCycle></OldLifeCycle>
-                <button onClick={handleClick}>n+1</button>
+                {comp}
+                <button onClick={this.handleClick}>属性n+1</button>
+                <button onClick={()=>{
+                    this.setState({
+                        show : !this.state.show
+                    })
+                }}>显示/隐藏</button>
             </div>
         )
     }
