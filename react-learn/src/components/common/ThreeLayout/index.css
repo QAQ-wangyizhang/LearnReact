@@ -1,0 +1,23 @@
+
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.container .aside-left{
+    order: 1;
+    border: 1px solid blue;
+}
+
+.container .main{
+    order: 2;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .aside-right{
+    order: 3;
+    border: 1px solid red;
+}
